@@ -1,1 +1,1 @@
-# Etch-a-Sketch
+Another project from the Odin curriculum. I will be creating a browser version of something between a sketchpad and an Etch-A-Sketch.
