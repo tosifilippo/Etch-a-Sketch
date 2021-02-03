@@ -1,13 +1,46 @@
+html {
+	display: flex;
+	justify-content: center;
+	background-color: gray;
+	font-family: 'Permanent Marker', cursive;
+}
+
+h1 {
+	color: white;
+	text-align: center;
+	margin-bottom: 0px;
+}
+
 #container {
     display: grid;
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
-    width: 960px;
-	height: 960px;
+    width: 50em;
+	height: 50em;
+	float: right;
+	background-color: white;
   }
   
 .grid-item {
     border: 1px solid #ddd;
-	text-align: center;
   }
 
+#color-btns-container {
+	text-align: center;
+	padding: 2%;
+}
+
+.color-btns {
+	color: white;
+	background-color: black;
+}
+
+#refresh-btn-container {
+	text-align: center;
+	padding: 2%;
+}
+
+#refresh-btn {
+	color: white;
+	background-color: black;
+}
