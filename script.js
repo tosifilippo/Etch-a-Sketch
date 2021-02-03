@@ -12,7 +12,10 @@ function makeRows(rows, cols) {
 	};
 	for (let i = 0; i < cell.length; i++) {
     cell[i].addEventListener("mouseover", function() {
-        this.style.backgroundColor = "#" + ((1<<24)*Math.random() | 0).toString(16);
+		this.style.backgroundColor = "black"
+		// this.style.backgroundColor = "#" + ((1<<24)*Math.random() | 0).toString(16);
+		// let currentOpacity = Number(this.style.backgroundColor.slice(-4, -1));
+        // this.style.backgroundColor = `rgba(0, 0, 0, ${currentOpacity + 0.1})`;
     	});
 	};
 };
