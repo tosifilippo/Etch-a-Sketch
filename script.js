@@ -3,22 +3,23 @@ const container = document.getElementById("container");
 let cell = document.getElementsByClassName("grid-item");
 
 function makeRows(rows, cols) {
-  container.style.setProperty('--grid-rows', rows);
-  container.style.setProperty('--grid-cols', cols);
-  for (c = 0; c < (rows * cols); c++) {
-    let cell = document.createElement("div");
-    // cell.innerText = (c + 1);
-    container.appendChild(cell).className = "grid-item";
-  };
+	container.style.setProperty('--grid-rows', rows);
+	container.style.setProperty('--grid-cols', cols);
+	for (c = 0; c < (rows * cols); c++) {
+		let cell = document.createElement("div");
+		// cell.innerText = (c + 1);
+		container.appendChild(cell).className = "grid-item";
+	};
+	for (let i = 0; i < cell.length; i++) {
+    cell[i].addEventListener("mouseover", function() {
+        this.style.backgroundColor = "#" + ((1<<24)*Math.random() | 0).toString(16);
+    	});
+	};
 };
 
 makeRows(16, 16);
 
-for (let i = 0; i < cell.length; i++) {
-    cell[i].addEventListener("mouseover", function() {
-        this.style.backgroundColor = "green";
-    });
-};
+
 
 function myFunction() {
 	while (container.firstChild) {
@@ -29,15 +30,10 @@ function myFunction() {
 		alert ("TROPPO GRANDE");
 		makeRows(16, 16);
 	} else if (isNaN(gridSize)) {
-		alert ("NON É UN NUMERO")
+		alert ("NON É UN NUMERO");
 		makeRows(16, 16);
 	} else {
 	makeRows(gridSize, gridSize);
-	}
-	for (let i = 0; i < cell.length; i++) {
-		cell[i].addEventListener("mouseover", function() {
-			this.style.backgroundColor = "green";
-		});
 	};
 };
 
