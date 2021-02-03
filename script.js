@@ -28,6 +28,9 @@ function myFunction() {
 	if (gridSize > 100) {
 		alert ("TROPPO GRANDE");
 		makeRows(16, 16);
+	} else if (isNaN(gridSize)) {
+		alert ("NON É UN NUMERO")
+		makeRows(16, 16);
 	} else {
 	makeRows(gridSize, gridSize);
 	}
