@@ -24,4 +24,5 @@ function myFunction() {
 	for (var i = 0; i < cell.length; i++) {
 	cell[i].style.backgroundColor = "white";
 	};
+	var gridSize = prompt("Scegli il numero di colonne", "0");
 };
