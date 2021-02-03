@@ -14,15 +14,27 @@ function makeRows(rows, cols) {
 
 makeRows(16, 16);
 
-for (var i = 0; i < cell.length; i++) {
+for (let i = 0; i < cell.length; i++) {
     cell[i].addEventListener("mouseover", function() {
         this.style.backgroundColor = "green";
     });
 };
 
 function myFunction() {
-	for (var i = 0; i < cell.length; i++) {
-	cell[i].style.backgroundColor = "white";
+	while (container.firstChild) {
+		container.removeChild(container.firstChild);
+		};
+	let gridSize = prompt("Scegli il numero di quadrati per lato", "0");
+	if (gridSize > 100) {
+		alert ("TROPPO GRANDE");
+		makeRows(16, 16);
+	} else {
+	makeRows(gridSize, gridSize);
+	}
+	for (let i = 0; i < cell.length; i++) {
+		cell[i].addEventListener("mouseover", function() {
+			this.style.backgroundColor = "green";
+		});
 	};
-	var gridSize = prompt("Scegli il numero di colonne", "0");
 };
+
