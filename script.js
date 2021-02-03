@@ -42,9 +42,6 @@ function mouseHover() {
 				case 'black':
 					this.style.backgroundColor = '#000000';
 					break;
-				// default:
-				// 	this.style.backgroundColor = color;
-				// 	break;
 			}; 	
     	});
 	};
