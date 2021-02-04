@@ -1,7 +1,8 @@
 html {
 	display: flex;
 	justify-content: center;
-	background-color: gray;
+	background: rgb(198,231,233);
+	background: linear-gradient(90deg, rgba(198,231,233,1) 0%, rgba(187,187,207,1) 55%, rgba(159,168,170,1) 100%);
 	font-family: 'Permanent Marker', cursive;
 }
 
@@ -9,20 +10,20 @@ h1 {
 	color: white;
 	text-align: center;
 	margin-bottom: 0px;
+	margin-top: 1%;
+	font-size: 350%;
 }
 
 #container {
     display: grid;
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
-    width: 50em;
-	height: 50em;
-	float: right;
-	background-color: white;
+    width: 49em;
+	height: 49em;
   }
   
 .grid-item {
-    border: 1px solid #ddd;
+    border: 1px solid #4d4d4d;
   }
 
 #color-btns-container {
@@ -30,17 +31,24 @@ h1 {
 	padding: 2%;
 }
 
-.color-btns {
+button {
 	color: white;
 	background-color: black;
+	font-family: 'Permanent Marker', cursive, sans-serif;	
+	font-size: 150%;
+	border-radius: 25px;
+}
+
+button:hover {
+	box-shadow: 5px 5px 15px -2px #2E2E2E;
+	cursor: pointer;
+}
+
+button:focus {
+	outline: none;
 }
 
 #refresh-btn-container {
 	text-align: center;
-	padding: 2%;
-}
-
-#refresh-btn {
-	color: white;
-	background-color: black;
+	padding-bottom: 2%;
 }

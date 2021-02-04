@@ -65,12 +65,12 @@ function refresh() {
 	while (container.firstChild) {
 		container.removeChild(container.firstChild);
 		};
-	let gridSize = prompt("Scegli il numero di quadrati per lato", "0");
+	let gridSize = prompt("Quante celle su ogni lato? Scegli un numero!", "0");
 	if (gridSize > 100) {
-		alert ("TROPPO GRANDE");
+		alert ("TROPPO GRANDE!!!");
 		makeRows(16, 16);
 	} else if (isNaN(gridSize)) {
-		alert ("NON É UN NUMERO");
+		alert ("NON É UN NUMERO!!!");
 		makeRows(16, 16);
 	} else {
 	makeRows(gridSize, gridSize);
